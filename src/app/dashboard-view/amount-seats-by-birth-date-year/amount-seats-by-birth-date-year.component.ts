@@ -10,6 +10,7 @@ import { DashboardViewService } from '../dashboard-view.service';
   styleUrls: ['./amount-seats-by-birth-date-year.component.css']
 })
 export class AmountSeatsByBirthDateYearComponent implements OnInit {
+  //this card dispaly the avarage of required amount of seats to every age (by year of birth)
   public barChartOptions: ChartOptions = {
     responsive: true,
   };

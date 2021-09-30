@@ -10,6 +10,8 @@ import { DashboardViewService } from '../dashboard-view.service';
   styleUrls: ['./count-to-hobby.component.css']
 })
 export class CountToHobbyComponent implements OnInit {
+
+  //this card display how much visitors chose each hobby
   public barChartOptions: ChartOptions = {
     responsive: true,
   };

@@ -8,8 +8,8 @@ export class engineTypeByGender {
 }
 @Injectable()
 export class DashboardViewService {
-
     PotentialBuyers: Array<any> = []
+    
     constructor() {
         this.PotentialBuyers = this.getPotentialBuyersDetails()
         if (!this.PotentialBuyers) {
@@ -24,7 +24,7 @@ export class DashboardViewService {
 
     // function to get the division to motortype Relative to gender
     getEngineTypeByGender(): engineTypeByGender {
-        let engineTypeByGenderObj: engineTypeByGender = new engineTypeByGender
+        const engineTypeByGenderObj: engineTypeByGender = new engineTypeByGender
         this.PotentialBuyers.forEach(p => {
             if (p.gender == "male") {
                 if (p.motorType == "electric") {
@@ -47,7 +47,7 @@ export class DashboardViewService {
 
     //return amount of the total visitors to the landing page and amount visitors that filled the forum successfully
     getVisitorsAndRegisterionCount(): [number, number] {
-        let visitorsCount: number = Number(localStorage.getItem("countVisitors"))
+        const visitorsCount: number = Number(localStorage.getItem("countVisitors"))
         return [visitorsCount, this.PotentialBuyers.length]
     }
 
@@ -69,7 +69,7 @@ export class DashboardViewService {
 
     //return how many visitors chose each hobby
     getCountPerHobbey(): Map<string, number> {
-        let countPerHobby: Map<string, number> = new Map()
+        const countPerHobby: Map<string, number> = new Map()
         let count: any
         this.PotentialBuyers.forEach(p => {
             p.hobbies.forEach((hobby: string) => {

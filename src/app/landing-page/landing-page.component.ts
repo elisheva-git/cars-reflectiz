@@ -43,7 +43,7 @@ export class LandingPageComponent implements OnInit {
       this.openSnackBar("fill all the fileds")
     }
     else {
-      //if the post request Ended successfully
+      //if the post request ended successfully
       if(this._service.postCarDetails(this.ownerDetailsForm.value)){
         this.ownerDetailsForm.reset()
         this.ownerDetailsForm.markAsUntouched()
@@ -62,5 +62,4 @@ export class LandingPageComponent implements OnInit {
       duration: 6000
     });
   }
- 
 }

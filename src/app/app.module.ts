@@ -9,10 +9,11 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { MaterialModule } from './material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CarsService } from './cars.service';
+import { BasicDesignComponent } from './basic-design/basic-design.component';
 
 @NgModule({
   declarations: [
-    AppComponent,LandingPageComponent,
+    AppComponent,LandingPageComponent,BasicDesignComponent
   ],
   imports: [
     BrowserModule,

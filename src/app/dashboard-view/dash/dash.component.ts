@@ -11,13 +11,6 @@ import { DashboardViewService } from '../dashboard-view.service';
 export class DashComponent {
   cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
-      if (matches) {
-        return {
-          columns: 1,
-          chart: { cols: 1, rows: 2 },
-          table: { cols: 1, rows: 4 },
-        };
-      }
      return {
         columns: 3,
         table: { cols: 1, rows: 2 },

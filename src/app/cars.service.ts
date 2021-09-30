@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CarsService {
-
     //save the new optional buyer details
     postCarDetails(ownerDetails: object): boolean {
         try {
