@@ -1,0 +1,34 @@
+<!-- Basic website design -->
+<div class="wrapper">
+    <header>
+        <p>
+            <mat-toolbar color="primary" class="nav">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+                    <mat-icon>directions_car</mat-icon>
+                </button>
+                <span>Perfect Car Match</span>
+                <span class="example-spacer"></span>
+                <!-- Buttons just for now so you can switch between pages (management page-dashboard and Registration page)  -->
+                <button routerLink="/" mat-button>Register</button>
+                <button routerLink="/dash" mat-button>Management</button>
+                <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+            </mat-toolbar>
+        </p>
+    </header>
+    <section>
+        <router-outlet></router-outlet>
+    </section>
+    <footer class="foo">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row color="primary">
+                <span style="font-size: 77%;">all rights reserved</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </footer>
+</div>

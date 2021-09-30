@@ -1,0 +1,38 @@
+.nav{
+  position: fixed;
+  height: 8%;
+  top: 0;
+  z-index: 2;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas:
+  "header header header"
+  "section section section"
+  "footer footer footer";
+  grid-template-rows: 80px 1fr 50px;
+  grid-template-columns: 15% 1fr 15%;
+  grid-gap: 4px;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+}
+
+section {
+  grid-area: section;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.foo{
+  height: 10%;
+
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

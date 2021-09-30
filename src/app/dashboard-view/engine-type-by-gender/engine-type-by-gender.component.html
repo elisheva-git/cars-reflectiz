@@ -1,0 +1,24 @@
+<div class="chartContainer">
+    <div>
+        <span>Female</span>
+        <canvas baseChart
+          [data]="chartDataFemale"
+          [labels]="labels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend">
+        </canvas>
+    </div>
+    <div>
+        <span>Male</span>
+        <canvas baseChart
+          [data]="chartDataMale"
+          [labels]="labels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend">
+        </canvas>
+    </div>
+</div>

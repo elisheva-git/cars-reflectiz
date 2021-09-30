@@ -1,0 +1,30 @@
+<!-- The basis of the dashboard -->
+<div class="grid-container">
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="45vh">
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
+      <app-card title="Favorite color">
+        <app-favorite-color-table></app-favorite-color-table>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Count registretions">
+        <app-statistic-visitors></app-statistic-visitors>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Avarage seats by year birth">
+        <app-amount-seats-by-birth-date-year></app-amount-seats-by-birth-date-year>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Count per hobbey">
+        <app-count-to-hobby></app-count-to-hobby>
+      </app-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+      <app-card title="Engine type by gender">
+        <app-engine-type-by-gender></app-engine-type-by-gender>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

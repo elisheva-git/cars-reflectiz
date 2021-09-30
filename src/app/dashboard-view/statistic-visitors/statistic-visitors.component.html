@@ -1,0 +1,14 @@
+<div class="chartContainer">
+    <div style="display: block;">
+        <h2>{{presentVisitors}}%</h2>
+        <span>  from visitors filled the form successfully</span>
+        <canvas baseChart
+          [data]="chartData"
+          [labels]="labels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [legend]="pieChartLegend">
+        </canvas>
+    </div>
+</div>
