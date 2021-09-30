@@ -1,4 +1,4 @@
-<!-- The basis of the dashboard -->
+<!-- The basic of the dashboard -->
 <div class="grid-container">
   <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="45vh">
     <mat-grid-tile [colspan]="( cardLayout | async )?.table?.cols" [rowspan]="( cardLayout | async )?.table?.rows">
@@ -17,7 +17,7 @@
       </app-card>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
-      <app-card title="Count per hobbey">
+      <app-card title="Amount of voters for each hobby">
         <app-count-to-hobby></app-count-to-hobby>
       </app-card>
     </mat-grid-tile>

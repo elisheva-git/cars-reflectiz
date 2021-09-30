@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CarsService {
+
+    //save the new optional buyer details
     postCarDetails(ownerDetails: object): boolean {
         try {
             if (localStorage.getItem("potentialBuyers")) {
@@ -18,6 +20,7 @@ export class CarsService {
             return false
         }
     }
+    //list of hobbies to choose
     hobbies:string[]=[
         "reading"
         ,"writing"

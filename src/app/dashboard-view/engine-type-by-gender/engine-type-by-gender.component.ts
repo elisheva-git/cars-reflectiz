@@ -11,6 +11,8 @@ import { DashboardViewService, engineTypeByGender } from '../dashboard-view.serv
 })
 export class EngineTypeByGenderComponent implements OnInit {
 
+//  Displays in two graphs one for each gender
+// And shows the distribution of engine type in each gender 
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };

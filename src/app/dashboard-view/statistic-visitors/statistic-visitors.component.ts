@@ -11,6 +11,7 @@ import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 })
 export class StatisticVisitorsComponent implements OnInit {
 
+  //this card show with graph how many from the visitors filled out the form correctly
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };

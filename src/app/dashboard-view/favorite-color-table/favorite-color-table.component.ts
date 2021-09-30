@@ -8,6 +8,7 @@ import { DashboardViewService } from '../dashboard-view.service';
 })
 export class FavoriteColorTableComponent implements OnInit {
 
+  //this card show with table the names of all the registrations and the favorit color to each one
   displayedColumns = ['name','color'];
   dataSource: any  
 
