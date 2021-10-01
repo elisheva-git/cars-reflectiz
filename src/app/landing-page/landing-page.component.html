@@ -1,5 +1,5 @@
 <div class="card">
-    <form [formGroup]="ownerDetailsForm" class="form_register" (submit)=" sandDetails()">
+    <form [formGroup]="ownerDetailsForm" class="form_register" (submit)="sendDetails()">
         <h2 style="padding-bottom: 20px;">Please Enter Your Details</h2>
         <p>
             <mat-form-field class="example-full-width" appearance="fill">
@@ -31,23 +31,11 @@
                 <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
         </p>
-        <mat-label>Location: </mat-label>
         <p>
+            <!-- find location with autocomplete by googel maps -->
             <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label for="address">address</mat-label>
-                <input matInput id="address" formControlName="address">
-            </mat-form-field>
-        </p>
-        <p>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label for="city">city</mat-label>
-                <input matInput id="city" formControlName="city">
-            </mat-form-field>
-        </p>
-        <p>
-            <mat-form-field class="example-full-width" appearance="fill">
-                <mat-label for="country">country</mat-label>
-                <input matInput id="country" formControlName="country">
+                <mat-label for="location">location</mat-label>
+                <input matInput id="location" #addresstext (change)="getPlaceAutocomplete()">
             </mat-form-field>
         </p>
         <p>
@@ -70,12 +58,12 @@
             </mat-radio-group>
         </p>
         <p>
-              <mat-form-field appearance="fill">
+            <mat-form-field appearance="fill">
                 <mat-label>Hobbies</mat-label>
                 <mat-select formControlName="hobbies" multiple>
-                  <mat-option *ngFor="let hobby of hobbies" [value]="hobby">{{hobby}}</mat-option>
+                    <mat-option *ngFor="let hobby of hobbies" [value]="hobby">{{hobby}}</mat-option>
                 </mat-select>
-              </mat-form-field>
+            </mat-form-field>
         </p>
         <button style="width:120px; padding: 5px;" mat-raised-button color="primary">send</button>
     </form>

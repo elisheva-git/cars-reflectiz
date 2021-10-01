@@ -21,7 +21,7 @@
         <app-count-to-hobby></app-count-to-hobby>
       </app-card>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.chart?.rows">
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart?.cols" [rowspan]="( cardLayout | async )?.doubleChart?.rows">
       <app-card title="Engine type by gender">
         <app-engine-type-by-gender></app-engine-type-by-gender>
       </app-card>

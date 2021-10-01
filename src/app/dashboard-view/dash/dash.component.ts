@@ -11,10 +11,19 @@ import { DashboardViewService } from '../dashboard-view.service';
 export class DashComponent {
   cardLayout = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
+      if (matches) {
+        return {
+          columns: 1,
+          chart: { cols: 1, rows: 1 },
+          table: { cols: 1, rows: 3 },
+          doubleChart: { cols: 1, rows: 2 },
+        };
+      }
      return {
         columns: 3,
         table: { cols: 1, rows: 2 },
         chart: { cols: 1, rows: 1 },
+        doubleChart: { cols: 1, rows: 1 },
       };
     })
   );
